@@ -63,7 +63,6 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .logo__item {
-    cursor: pointer;
     padding: 15px 0px;
 }
 
@@ -188,6 +187,10 @@ input[type="search"]::-webkit-search-results-decoration {
     -ms-transform: translateX(26px);
     transform: translateX(26px);
     background-color: var(--cinza-claro);
+}
+
+.cabecalho__switch-input:focus+.cabecalho__switch-slider {
+    outline: auto 1px;
 }
 
 

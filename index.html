@@ -15,13 +15,13 @@
 <body>
     <header>
         <div class="cabecalho__container">
-            <div class="logo__item">
+            <a href="/" class="logo__item">
                 <img src="./img/modo_claro/vidflow-logo-light-mode.png" alt="Página inicial do VidFlow">
-            </div>
+            </a>
 
             <div class="cabecalho__pesquisar__item">
                 <form class="form__pesquisa">
-                    <input type="search" class="pesquisar__input" placeholder="Pesquisar">
+                    <input aria-label="Pesquisar vídeos" type="search" class="pesquisar__input" placeholder="Pesquisar">
 
                     <img src="./img/modo_claro/menu_superior/keyboard.svg" alt="" class="pesquisar__input-teclado">
                     
@@ -32,25 +32,25 @@
             </div>
 
             <div class="secao-links-e-botao-switch">
-                <ul class="cabecalho__links">
+                <ul aria-label="Links do cabeçalho" class="cabecalho__links">
                     <li>
-                        <a href="#" class="cabecalho__videos"></a>
+                        <a aria-label="Criar vídeo" title="Criar vídeo" href="#" class="cabecalho__videos"></a>
                     </li>
     
                     <li>
-                        <a href="#" class="cabecalho__apps"></a>
+                        <a aria-label="Aplicativos" title="Aplicativos" href="#" class="cabecalho__apps"></a>
                     </li>
     
                     <li>
-                        <a href="#" class="cabecalho__notificacoes"></a>
+                        <a aria-label="Notificações" title="Notificações" href="#" class="cabecalho__notificacoes"></a>
                     </li>
     
                     <li>
-                        <a href="#" class="cabecalho__avatar"></a>
+                        <a aria-label="Perfil de usuário" title="Perfil de usuário" href="#" class="cabecalho__avatar"></a>
                     </li>
                 </ul>
     
-                <label class="cabecalho__switch">
+                <label aria-label="Alternar modo escuro" title="Alternar modo escuro" class="cabecalho__switch">
                     <input type="checkbox" class="cabecalho__switch-input">
                     <span class="cabecalho__switch-slider"></span>
                 </label>
@@ -63,7 +63,7 @@
 
     <div class="menu__container-wrapper">
         <aside class="menu__container">
-            <section class="menu__secao">
+            <section aria-label="Links principais" class="menu__secao">
                 <ul class="menu__lista menu__links-principais">
                     <li>
                         <a class="menu__itens" href="#">
@@ -102,7 +102,7 @@
                 </ul>
             </section>
 
-            <section class="menu__secao">
+            <section aria-label="Links para vídeos guardados na conta" class="menu__secao">
                 <ul class="menu__lista">
                     <li>
                         <a class="menu__itens" href="#">
@@ -127,8 +127,8 @@
                 </ul>
             </section>
 
-            <section class="menu__secao">
-                <span class="menu__secao-titulo">Inscrições</span>
+            <section aria-labelledby="texto-inscricoes" class="menu__secao">
+                <span id="texto-inscricoes" class="menu__secao-titulo">Inscrições</span>
 
                 <ul class="menu__lista">
                     <li class="menu__canal">
@@ -187,8 +187,8 @@
                 </button>
             </section>
 
-            <section class="menu__secao">
-                <span class="menu__secao-titulo">
+            <section aria-labelledby="titulo-mais-da-pagina" class="menu__secao">
+                <span id="titulo-mais-da-pagina" class="menu__secao-titulo">
                     Mais da página
                 </span>
 
