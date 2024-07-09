@@ -1,7 +1,13 @@
-const formPesquisa = document.querySelector('.form__pesquisa');
+const formPesquisa = document.querySelector(".form__pesquisa");
 
-formPesquisa.addEventListener('submit', (evento) => {
+formPesquisa.addEventListener("submit", (evento) => {
   evento.preventDefault();
+
+  const primeiroVideoFiltrado = document.querySelector(
+    ".videos__item:not(.escondido) > iframe"
+  );
+
+  primeiroVideoFiltrado?.focus();
 });
 
 const barraDePesquisa = document.querySelector(".pesquisar__input");
@@ -13,7 +19,9 @@ function filtrarPesquisa() {
 
   if (barraDePesquisa.value !== "") {
     for (const video of videos) {
-      let titulo = video.querySelector(".titulo-video").textContent.toLowerCase();
+      let titulo = video
+        .querySelector(".titulo-video")
+        .textContent.toLowerCase();
       let valorFiltro = barraDePesquisa.value.toLowerCase();
 
       video.classList.toggle("escondido", !titulo.includes(valorFiltro));

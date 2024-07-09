@@ -14,13 +14,15 @@
 
 <body>
     <header>
+        <h1 class="visualmente-escondido">VidFlow</h1>
+
         <div class="cabecalho__container">
             <a href="/" class="logo__item">
                 <img src="./img/modo_claro/vidflow-logo-light-mode.png" alt="Página inicial do VidFlow">
             </a>
 
             <div class="cabecalho__pesquisar__item">
-                <form class="form__pesquisa">
+                <form role="search" class="form__pesquisa">
                     <input aria-label="Pesquisar vídeos" type="search" class="pesquisar__input" placeholder="Pesquisar">
 
                     <img src="./img/modo_claro/menu_superior/keyboard.svg" alt="" class="pesquisar__input-teclado">
@@ -130,7 +132,7 @@
             <section aria-labelledby="texto-inscricoes" class="menu__secao">
                 <span id="texto-inscricoes" class="menu__secao-titulo">Inscrições</span>
 
-                <ul class="menu__lista">
+                <ul id="menu__canais" class="menu__lista">
                     <li class="menu__canal">
                         <a class="menu__itens" href="#">
                             <i class="icone__alura"></i>
@@ -181,7 +183,7 @@
                     </li>
                 </ul>
 
-                <button class="menu__itens menu__botao-expandir-canais">
+                <button aria-expanded="false" aria-controls="menu__canais" class="menu__itens menu__botao-expandir-canais">
                     <i class="icone__mostrar"></i>
                     <span class="texto-colapsar-canais">Mostrar mais 2</span>
                 </button>
@@ -216,54 +218,59 @@
     </div>
 
     <main>
-        <div class="superior__secao__container">
-            <button name="Tudo" class="botao-categoria selecionado">
+        <h2 class="visualmente-escondido">Seção de Vídeos</h2>
+
+        <div role="tablist" class="superior__secao__container">
+            <button id="botao-tudo" role="tab" tabindex="0" aria-selected="true" name="Tudo" class="botao-categoria selecionado">
                 Tudo
             </button>
 
-            <button name="Debates" class="botao-categoria">
+            <button id="botao-debates" role="tab" tabindex="-1" aria-selected="false" aria-controls="painel-videos" name="Debates" class="botao-categoria">
                 Debates
             </button>
 
-            <button name="Ao Vivo" class="botao-categoria">
+            <button id="botao-ao-vivo" role="tab" tabindex="-1" aria-selected="false" aria-controls="painel-videos" name="Ao Vivo" class="botao-categoria">
                 Ao Vivo
             </button>
 
-            <button name="Podcasts" class="botao-categoria">
+            <button id="botao-podcasts" role="tab" tabindex="-1" aria-selected="false" aria-controls="painel-videos" name="Podcasts" class="botao-categoria">
                 Podcasts
             </button>
 
-            <button name="Front-end" class="botao-categoria">
+            <button id="botao-front-end" role="tab" tabindex="-1" aria-selected="false" aria-controls="painel-videos" name="Front-end" class="botao-categoria">
                 Front-end
             </button>
 
-            <button name="Mobile" class="botao-categoria">
+            <button id="botao-mobile" role="tab" tabindex="-1" aria-selected="false" aria-controls="painel-videos" name="Mobile" class="botao-categoria">
                 Mobile
             </button>
 
-            <button name="Data Science" class="botao-categoria">
+            <button id="botao-data-science" role="tab" tabindex="-1" aria-selected="false" aria-controls="painel-videos" name="Data Science" class="botao-categoria">
                 Data Science
             </button>
 
-            <button name="Apps" class="botao-categoria">
+            <button id="botao-apps" role="tab" tabindex="-1" aria-selected="false" aria-controls="painel-videos" name="Apps" class="botao-categoria">
                 Apps
             </button>
 
-            <button name="Programação" class="botao-categoria">
+            <button id="botao-programacao" role="tab" tabindex="-1" aria-selected="false" aria-controls="painel-videos" name="Programação" class="botao-categoria">
                 Programação
             </button>
 
-            <button name="Inteligência Artificial" class="botao-categoria">
+            <button id="botao-inteligencia-artificial" role="tab" tabindex="-1" aria-selected="false" aria-controls="painel-videos" name="Inteligência Artificial" class="botao-categoria">
                 Inteligência Artificial
             </button>
-            <button name="Inovação" class="botao-categoria">
+            <button id="botao-inovacao" role="tab" tabindex="-1" aria-selected="false" aria-controls="painel-videos" name="Inovação" class="botao-categoria">
                 Inovação
             </button>
         </div>
 
-        <ul class="videos__container">
+        <div id="painel-videos" role="tabpanel" aria-labelledby="botao-tudo">
+            <ul class="videos__container">
 
-        </ul>
+            </ul>
+        </div>
+
     </main>
 
     <script src="script.js" type="module"></script>

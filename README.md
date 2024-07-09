@@ -8,7 +8,10 @@ The objective of the project was to identify accessibility problems and fix them
 
 ## Used tools:
 
-* 
+* HTML
+* CSS
+* JavaScript
+* NVDA
 
 *(Alura is a Brazilian technology school and for acessibility reasons this code is in Portuguese)*
 
@@ -24,5 +27,8 @@ O objetivo do projeto era identificar problemas de acessibilidade e arrumá-los,
 
 ## Ferramentas utilizadas:
 
-* 
+* HTML
+* CSS
+* JavaScript
+* NVDA
 
